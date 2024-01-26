@@ -1,21 +1,18 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "compilerOptions": {
-    "ignoreDeprecations": "5.0",
-    "lib": [      
-      "es2022",
-      "dom"
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "es6",
+            "es2016"
+        ],
+        "target": "es6",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*",
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+    "exclude": ["node_modules"]
 }
